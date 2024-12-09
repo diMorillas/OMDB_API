@@ -2,36 +2,54 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #03091C;
-  }
-  
-  /* Search Section */
-  .input-group input {
-    flex: 0 0 60%;
+    color: white;
+}
+
+/* Search Section */
+.input-group input {
+    flex: 0 0 55%;
     height: 50px;
     font-size: 1.2rem;
-  }
-  
-  .input-group select {
-    flex: 0 0 20%;
+}
+
+.input-group select {
+    flex: 0 0 15%;
     height: 50px;
     font-size: 1.2rem;
     text-align: center;
-  }
-  
-  /* Card Styles */
-  .card-title {
+}
+
+.input-group button {
+    flex: 0 0 15%;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+}
+
+.card-title {
     font-size: 1.25rem;
     font-weight: bold;
-  }
-  
-  .card-text span {
+}
+
+.card-text span {
     font-size: 0.9rem;
-    color: #555;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #f8f9fa;
+    color: #bbb;
+}
+
+.card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
     font-size: 0.9rem;
-  }
-  
+}
