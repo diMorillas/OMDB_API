@@ -19,7 +19,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     resultsContainer.innerHTML = ''; // Clear previous results
 
     // Validate search input
-    if (!query.trim()) {
+    if (!query.trim()) { // Eliminates any extra blank spaces
         alert('Please, write a movie.');
         return;
     }
