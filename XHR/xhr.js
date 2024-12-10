@@ -1,5 +1,5 @@
 /**
- * @file script.js
+ * @file xhr.js
  * @description JavaScript file for handling movie search using the OMDB API. 
  * Handles fetching, filtering, and displaying movie data in response to user input.
  * @authors 
@@ -41,7 +41,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
                     card.className = 'col-md-4'; // Bootstrap column class
                     card.innerHTML = `
                         <div class="card">
-                            <img src="${movie.Poster !== 'N/A' ? movie.Poster : './images/no-photo-aviable.jpg'}" class="card-img-top" alt="${movie.Title}">
+                            <img src="${movie.Poster !== 'N/A' ? movie.Poster : '../images/no-photo-aviable.jpg'}" class="card-img-top" alt="${movie.Title}">
                             <div class="card-body">
                                 <h5 class="card-title">${movie.Title}</h5>
                                 <p class="card-text">Year: ${movie.Year}</p>
