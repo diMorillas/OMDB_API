@@ -69,7 +69,7 @@
             <select id="yearFilter" class="form-select">
                 <option value="" style="text-align: center;">Filter by Year</option>
                 <script>
-                    // Populate the dropdown dynamically with years
+                    // Populate the dropdown dynamically with years with bootstrap classes
                     for (let year = new Date().getFullYear(); year >= 1900; year--) {
                         document.write(`<option value="${year}" class="text-center">${year}</option>`);
                     }
