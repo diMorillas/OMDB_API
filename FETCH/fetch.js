@@ -29,8 +29,12 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
     if (year) url += `&y=${year}`; // Append year filter if provided
 
     try {
-        // Fetch data from the API
-        const response = await fetch(url);
+        // Create a promise race to handle timeout and fetch if 5secs passes we show an error
+        
+        const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('Request timed out')), 5000));
+        const fetchPromise = fetch(url);
+
+        const response = await Promise.race([timeout, fetchPromise]);
 
         if (!response.ok) {
             // Handle HTTP errors
@@ -61,6 +65,6 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         }
     } catch (error) {
         // Handle network errors or unexpected issues
-        resultsContainer.innerHTML = `<p class="text-danger text-center">Network error occurred.</p>`;
+        resultsContainer.innerHTML = `<p class="text-danger text-center">${error.message}</p>`;
     }
 });
