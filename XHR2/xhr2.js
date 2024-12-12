@@ -40,7 +40,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
                     const card = document.createElement('div');
                     card.className = 'col-md-4'; // Bootstrap column class
 
-                    // Request the movie poster as a blob
+                    // Request the movie poster as a blob (another request to find the movie poster using the name with the movie.Poster value from the first response)
                     const posterXHR = new XMLHttpRequest();
                     const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : '../images/no-photo-aviable.jpg';
                     posterXHR.open('GET', posterUrl, true);
