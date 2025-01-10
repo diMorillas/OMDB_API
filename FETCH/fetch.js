@@ -27,6 +27,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     const apiKey = '46dd0020'; // OMDB API key (replace if needed)
     let url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(query)}`;
     if (year) url += `&y=${year}`; // Append year filter if provided
+    if (document.getElementById("typeFilter").value != "") url+= `&type=${document.getElementById("typeFilter").value}`; //Append type if provided
 
     // Create a promise race to handle timeout and fetch if 5secs passes we show an error
     const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('Request timed out')), 5000));
@@ -51,6 +52,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
                             <div class="card-body">
                                 <h5 class="card-title">${movie.Title}</h5>
                                 <p class="card-text">Year: ${movie.Year}</p>
+                                <p class="card-text">Type: ${movie.Type}</p>
                             </div>
                         </div>`;
                     resultsContainer.appendChild(card);
