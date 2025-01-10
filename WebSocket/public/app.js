@@ -17,9 +17,10 @@ const socket = io();
 document.getElementById('searchBtn').addEventListener('click', () => {
     const query = document.getElementById('searchInput').value; // User's search input
     const year = document.getElementById('yearFilter').value; // Year filter, if provided
+    const type = document.getElementById('typeFilter').value; // Type filter, if provided
 
     // Emit the 'searchMovie' event to the server
-    socket.emit('searchMovie', { query, year });
+    socket.emit('searchMovie', { query, year, type });
 });
 
 /**
@@ -48,7 +49,7 @@ socket.on('searchResults', (movies) => {
                 <div class="card-body">
                     <h5 class="card-title">${movie.Title}</h5>
                     <p class="card-text">Year: ${movie.Year}</p>
-                    <p class="card-text">Year: ${movie.Type}</p>
+                    <p class="card-text">Type: ${movie.Type}</p>
                 </div>
             </div>`;
         resultsContainer.appendChild(card);
