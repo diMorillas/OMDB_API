@@ -48,6 +48,7 @@ socket.on('searchResults', (movies) => {
                 <div class="card-body">
                     <h5 class="card-title">${movie.Title}</h5>
                     <p class="card-text">Year: ${movie.Year}</p>
+                    <p class="card-text">Year: ${movie.Type}</p>
                 </div>
             </div>`;
         resultsContainer.appendChild(card);

@@ -65,6 +65,7 @@
         </div>
 
         <!-- Filter Section -->
+        <!-- Filter Section -->
         <div class="mb-4">
             <select id="yearFilter" class="form-select">
                 <option value="" style="text-align: center;">Filter by Year</option>
@@ -74,6 +75,15 @@
                         document.write(`<option value="${year}" class="text-center">${year}</option>`);
                     }
                 </script>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <select id="typeFilter" class="form-select">
+                <option value="" style="text-align: center;">Filter by Type</option>
+                <option value="movie" style="text-align: center;">Movie</option>
+                <option value="series" style="text-align: center;">Series</option>
+                <option value="epidsodes" style="text-align: center;">Episodes</option>
             </select>
         </div>
 

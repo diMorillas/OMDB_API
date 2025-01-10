@@ -51,6 +51,8 @@ io.on('connection', (socket) => {
 
         let url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(query)}`;
         if (year) url += `&y=${year}`;
+        if (document.getElementById("typeFilter").value != "") url+= `&type=${document.getElementById("typeFilter").value}`; //Append type if provided
+
 
         try {
             const response = await axios.get(url);
