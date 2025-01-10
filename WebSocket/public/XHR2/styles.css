@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#searchInput {
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+#searchBtn {
+    height: 50px;
+}
+
+.card {
+    margin: 10px 0;
+}
+
+.card img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+body{
+    color: white;
+    background-color: #03091C;
+    font-family: "Poppins", serif;
+}
+
+.brand-color{
+    color: #FF274C;
+    font-weight: bold;
+}
